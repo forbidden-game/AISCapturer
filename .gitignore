@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# GRC cache
+.cache/
+
+# Build artifacts
+**/build*/
+
+# Captures / datasets
+captures/*
+!captures/.gitkeep
+*.sigmf-data
+*.sigmf-meta
+
+# Local test outputs
+_test_tagged*/
+
+# GRC block cache
+grc_blocks/_cache.json
+# OS
+.DS_Store

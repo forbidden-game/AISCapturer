@@ -1,0 +1,46 @@
+id: ais_demod
+label: AIS Demod (gr-ais)
+flags: [ python ]
+
+parameters:
+-   id: samples_per_symbol
+    label: Samples/Symbol
+    dtype: float
+    default: '5'
+-   id: bits_per_sec
+    label: Bits per Sec
+    dtype: float
+    default: '9600'
+-   id: clockrec_gain
+    label: Clockrec Gain
+    dtype: float
+    default: '0.04'
+-   id: omega_relative_limit
+    label: Omega Relative Limit
+    dtype: float
+    default: '0.01'
+-   id: fftlen
+    label: FFT Length
+    dtype: int
+    default: '1024'
+
+inputs:
+-   domain: stream
+    dtype: complex
+
+outputs:
+-   domain: stream
+    dtype: byte
+
+templates:
+    imports: import ais
+    make: |-
+        ais.ais_demod({
+            "samples_per_symbol": ${samples_per_symbol},
+            "bits_per_sec": ${bits_per_sec},
+            "clockrec_gain": ${clockrec_gain},
+            "omega_relative_limit": ${omega_relative_limit},
+            "fftlen": ${fftlen},
+        })
+
+file_format: 1
