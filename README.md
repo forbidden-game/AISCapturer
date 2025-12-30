@@ -10,6 +10,7 @@
 - `third_party/`：OOT 源码（`gr-ais` 等）
 - `captures/`：采集输出目录（默认空；已在 `.gitignore` 中忽略）
 - `AIS采集方案.md`：项目记录（背景、进展、决策）
+- `ais_collect_wideband_解读.md`：主采集 flowgraph 的逐模块解释与参数说明
 
 ## 复现步骤（其他机器）
 > 说明：以下步骤针对 Ubuntu 22.04 + Conda。若已安装 UHD 与 B210 正常，直接跳到第 2 步。
